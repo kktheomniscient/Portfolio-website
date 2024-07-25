@@ -13,7 +13,7 @@
 }
 
 body{
-    animation: background-pan 10s linear infinite;
+    animation: background-pan 4s linear infinite;
     background: linear-gradient(
         to right,
         var(--g1),
@@ -27,8 +27,16 @@ body{
     margin: 0%;
 }
 
+body.toggled {
+    animation: none;
+}
+
 body.toggled > #title{
     opacity: 0;
+}
+
+body.toggled > #inside{
+    opacity: 1;
 }
 
 .centered{
@@ -50,7 +58,7 @@ body.toggled > #title{
 }
 
 .tile{
-    cursor: pointer;
+    cursor: default;
     position: relative;
 }
 
@@ -58,17 +66,18 @@ body.toggled > #title{
     background-color: rgb(20, 20, 20);
     content: "";
     position: absolute;
-    inset: 0.7px;
+    inset: 0.9px;
 }
 
 #title{
     color:white;
     font-family: "Rubik",sans-serif;
-    font-size: 4vw;
+    font-size: 4vw ;
+    font-weight: bold;
     margin: 0px;
     padding: 0px;
     pointer-events: none;
-    transition: opacity 1200ms ease;
+    transition: opacity 600ms ease;
     width: 50vw;
     z-index: 3;
     text-wrap: wrap;
@@ -80,4 +89,35 @@ body.toggled > #title{
     font-family: "Dancing Script",cursive;
     font-size: 1.8em;
     line-height: 0.8em;
+}
+
+#inside {
+    opacity: 0;
+    pointer-events: none;
+    transition:opacity 600ms ease;
+    z-index: 1;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 11vw;
+    object-fit: contain;
 }
