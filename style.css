@@ -58,7 +58,7 @@ body.toggled > #inside{
 }
 
 .tile{
-    cursor: default;
+    cursor: pointer;
     position: relative;
 }
 
