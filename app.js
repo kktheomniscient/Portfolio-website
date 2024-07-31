@@ -54,3 +54,31 @@ const createGrid = () => {
 window.onresize = () => createGrid();
 
 createGrid();
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === '1') {
+        window.open('https://kktheomniscient.github.io/Spotify-replica/', '_blank'); 
+    }
+    else if (event.key === '2') {
+        window.open('https://kktheomniscient.github.io/calc/', '_blank'); 
+    }
+    else if (event.key === '3') {
+        window.open('https://kktheomniscient.github.io/Simon-says/', '_blank'); 
+    }
+    else if (event.key === 'l') {
+        window.open('https://www.linkedin.com/in/krishnakant-singh-5754a628b/', '_blank'); 
+    }
+    else if (event.key === 'g') {
+        window.open('https://github.com/kktheomniscient', '_blank'); 
+    }
+    else if (event.key === 'e') {
+        openEmail();
+    }
+
+});
+
+function openEmail() {
+    const emailAddress = "kk.the.omniscient@gmail.com";
+    const mailtoLink = `mailto:${emailAddress}`;
+    window.location.href = mailtoLink;
+}
